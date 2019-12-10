@@ -2,12 +2,10 @@
 #include <omp.h>
 
 
-int main(){
+class consumer{
 
 
 
 
 
-    
-    return 0;
-}
+};
