@@ -1,46 +1,39 @@
 #include <iostream>
 #include <omp.h>
-#include "../Singha/main.cpp"
+#include "../Singha/buff&Prod.cpp"
 using namespace std;
 
 class Consumer
 {
 public:
     string name;
-    Buffer buffer;
     int money;
-    Consumer(string n, int m, Buffer b);
+    Consumer(string n, int m);
 
-    void buy(Consumer a, Buffer b)
+    void getSushi()
     {
-        if (a.money != 0)
+        // while(isEmtry);
+        for (int i = 0; true; i++)
         {
-            /* code this here */
+            if(money>=buffer.front().price){
+                Sushi temp =get();
+               std:: cout<<name<<" have money "<< money<<" ::::: Get " << temp.name<<" : " << temp.price << endl;
+                money = money-temp.price;
+               std:: cout<< "have :"<<money<<"\n\n";
+            }else{
+                break;
+            }
+          
         }
-        else
-        {
-            NotHaveAmoney(a);
-        }
-    }
-
-    void NotHaveAmoney(Consumer a)
-    {
-        if (a.money <= 0)
-            cout << "Now you not have a money";
+       
+        
+        
     }
 };
 
-Consumer::Consumer(string n, int m, Buffer b)
+Consumer::Consumer(string n, int m)
 {
     name = n;
     money = m;
-    buffer = b;
 }
 
-// int main(int argc, char const *argv[])
-// {
-//     Consumer n01("koa", 1500);
-//     cout << n01.name << " have a money " << n01.money<< endl;
-
-//     return 0;
-// }
