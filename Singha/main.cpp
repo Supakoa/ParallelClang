@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <omp.h>
-#define MAX_BUFFER 100
+#define MAX_BUFFER 10
 #include <queue>
 using namespace std;
 
@@ -51,12 +51,22 @@ public:
         return s;
     }
 };
+Sushi* all ={new Sushi("aaei",10)};
 class Producer
 {
 public:
     string name;
     Buffer buffer;
     Producer(string n, Buffer b);
+    void makeOrder(){
+    for (int i = 0; i < 100; i++)
+    {
+        Sushi temp = all[0];
+       cout<<name<<" Make : ";
+       buffer.add(temp);
+    }
+    
+}
 };
 
 Producer::Producer(string n, Buffer b)
@@ -68,17 +78,17 @@ Producer::Producer(string n, Buffer b)
 // int main()
 // {
 
-//     Buffer buffer;
-//     Producer p1("singha", buffer);
-//     Sushi a("name", 50);
-// #pragma omp sections
-//     {
-// #pragma omp section
-//         {
-//             a.price = a.price + 1;
-//             p1.buffer.add(a);
-//         }
-//     }
+    Buffer buffer;
+    #pragma omp parallel
+    {
+        if(omp_get_thread_num()==0){
+            Producer p1("singha", buffer);
+            p1.makeOrder();
+        }
+    }
+    
+    Sushi a("name", 50);
+
 
 //     // printf(" %s\n", p1.name);
 //     // cout << p1.name << "\n";
@@ -87,5 +97,5 @@ Producer::Producer(string n, Buffer b)
 //     // printf("Hello world! %d \n",omp_get_thread_num());
 //     // }
 
-//     return 0;
-// }
+    return 0;
+}
