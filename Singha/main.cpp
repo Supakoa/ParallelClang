@@ -54,7 +54,6 @@ public:
 Sushi* all ={new Sushi("aaei",10)};
 class Producer
 {
-
 public:
     string name;
     Buffer buffer;
@@ -76,8 +75,8 @@ Producer::Producer(string n, Buffer b)
     buffer = b;
 }
 
-int main()
-{
+// int main()
+// {
 
     Buffer buffer;
     #pragma omp parallel
@@ -91,12 +90,12 @@ int main()
     Sushi a("name", 50);
 
 
-    // printf(" %s\n", p1.name);
-    // cout << p1.name << "\n";
-    // #pragma omp parallel
-    // {
-    // printf("Hello world! %d \n",omp_get_thread_num());
-    // }
+//     // printf(" %s\n", p1.name);
+//     // cout << p1.name << "\n";
+//     // #pragma omp parallel
+//     // {
+//     // printf("Hello world! %d \n",omp_get_thread_num());
+//     // }
 
     return 0;
 }
