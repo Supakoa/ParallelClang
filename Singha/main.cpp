@@ -53,7 +53,6 @@ public:
 };
 class Producer
 {
-
 public:
     string name;
     Buffer buffer;
@@ -66,27 +65,27 @@ Producer::Producer(string n, Buffer b)
     buffer = b;
 }
 
-int main()
-{
+// int main()
+// {
 
-    Buffer buffer;
-    Producer p1("singha", buffer);
-    Sushi a("name", 50);
-#pragma omp sections
-    {
-#pragma omp section
-        {
-            a.price = a.price + 1;
-            p1.buffer.add(a);
-        }
-    }
+//     Buffer buffer;
+//     Producer p1("singha", buffer);
+//     Sushi a("name", 50);
+// #pragma omp sections
+//     {
+// #pragma omp section
+//         {
+//             a.price = a.price + 1;
+//             p1.buffer.add(a);
+//         }
+//     }
 
-    // printf(" %s\n", p1.name);
-    // cout << p1.name << "\n";
-    // #pragma omp parallel
-    // {
-    // printf("Hello world! %d \n",omp_get_thread_num());
-    // }
+//     // printf(" %s\n", p1.name);
+//     // cout << p1.name << "\n";
+//     // #pragma omp parallel
+//     // {
+//     // printf("Hello world! %d \n",omp_get_thread_num());
+//     // }
 
-    return 0;
-}
+//     return 0;
+// }
