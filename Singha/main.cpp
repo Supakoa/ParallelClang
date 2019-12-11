@@ -78,16 +78,16 @@ Producer::Producer(string n, Buffer b)
 // int main()
 // {
 
-    Buffer buffer;
-    #pragma omp parallel
-    {
-        if(omp_get_thread_num()==0){
-            Producer p1("singha", buffer);
-            p1.makeOrder();
-        }
-    }
+    // Buffer buffer;
+    // #pragma omp parallel
+    // {
+    //     if(omp_get_thread_num()==0){
+    //         Producer p1("singha", buffer);
+    //         p1.makeOrder();
+    //     }
+    // }
     
-    Sushi a("name", 50);
+    // Sushi a("name", 50);
 
 
 //     // printf(" %s\n", p1.name);
@@ -97,5 +97,5 @@ Producer::Producer(string n, Buffer b)
 //     // printf("Hello world! %d \n",omp_get_thread_num());
 //     // }
 
-    return 0;
-}
+//     return 0;
+// }
