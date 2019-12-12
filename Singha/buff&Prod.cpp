@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 #include <stdio.h>
 #include <omp.h>
 #define MAX_BUFFER 10
@@ -20,36 +20,34 @@ Sushi::Sushi(string n, int p)
 
 queue<Sushi> buffer;
 int n = 0;
-
+bool lock = 0;
 bool isFull()
 {
     return n >= MAX_BUFFER;
 }
 bool isEmtry()
 {
-    // cout << "Buffer" << n << "\n";
     return n <= 0;
 }
 
-void add(Sushi s,string name)
+void add(Sushi s, string name)
 {
-  
-    while (buffer.size()>=MAX_BUFFER);
     
-    
-   std:: cout << "Buffer" << n << " // " << name << " Make : " << s.name << " : " << s.price<<"\n";
-    buffer.push(s);
+    while (buffer.size()>= MAX_BUFFER)
+        ;
     n++;
+    cout << "\nBuffer" << n << " // " << name << " Make : " << s.name << " : " << s.price << "\n";
+    buffer.push(s);
+   
 }
 
 Sushi get()
 {
-    while (buffer.empty())  ;
-    Sushi s = buffer.front();
-    // cout << "Buffer" << buffer.size() << " GET :" << s.name << " : " << s.price << "\n";
-    buffer.pop();
-    n--;
-    return s;
+        while (buffer.empty());
+        Sushi s = buffer.front();
+        buffer.pop();
+        n--;
+        return s;
 }
 Sushi *all = {new Sushi("aaei", 10)};
 class Producer
@@ -63,8 +61,7 @@ public:
         {
             Sushi temp = all[0];
             all[0].price = all[0].price + 1;
-
-            add(temp,name);
+            add(temp, name);
         }
     }
 };

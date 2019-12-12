@@ -12,22 +12,17 @@ public:
 
     void getSushi()
     {
-        // while(isEmtry);
         for (int i = 0; true; i++)
         {
             if(money>=buffer.front().price){
                 Sushi temp =get();
-               std:: cout<<name<<" have money "<< money<<" ::::: Get " << temp.name<<" : " << temp.price << endl;
+               std:: cout << "\n" <<name<<" have money "<< money<<" ::::: Get " << temp.name<<" : " << temp.price << endl;
                 money = money-temp.price;
                std:: cout<< "have :"<<money<<"\n\n";
             }else{
                 break;
             }
-          
         }
-       
-        
-        
     }
 };
 
