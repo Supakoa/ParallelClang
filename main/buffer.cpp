@@ -39,9 +39,7 @@ void generate_sushi()
     while (c <= 45)
     {
         string line;
-        // cout << i << " : " << c % 2 << "\n";
         getline(csv, sushi[i][c % 2], ',');
-        // sushi[i][c % 2]
         cout << "[" << i << " : " << c % 2 << "]"
              << ": " << sushi[i][c % 2] << "\n\n";
         if (c % 2 != 0)
@@ -60,25 +58,16 @@ void generate_sushi()
 
 queue<Sushi> buffer;
 int n = 0;
-
-// bool isFull()
-// {
-//     return n >= MAX_BUFFER;
-// }
-// bool isEmtry()
-// {
-//     return n <= 0;
-// }
-
 void add(Sushi s, string name)
 {
 
     while (buffer.size() >= MAX_BUFFER)
         ;
     n++;
-    cout << "\n[Producer] Buffer Size: " << buffer.size() + 1 << " | [" << name << "] make sushi => [" << s.name << " : " << s.price << "B]\n";
-                std::this_thread::sleep_for(std::chrono::milliseconds(100));
-
+    cout << "\n---------------------- Producer --------------------";
+    cout << "\n[PRODUCER] Buffer Size: " << buffer.size() + 1 << " | [" << name << "]"<< endl ; 
+    cout << "make sushi => [" << s.name << " : " << s.price << ".B]\n";
+    cout << "---------------------- END Producer --------------------" << endl;
     buffer.push(s);
 }
 
@@ -107,7 +96,6 @@ public:
     {
         for (int i = 0; true; i++)
         {
-            // cout << "ran: " << ra << "\n";
             add(sushi, this->name);
         }
     }
