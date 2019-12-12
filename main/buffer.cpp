@@ -74,7 +74,8 @@ void add(Sushi s, string name)
     while (buffer.size() >= MAX_BUFFER)
         ;
     n++;
-    cout << "\nBuffer" << n << " // " << name << " Make : " << s.name << " : " << s.price << "\n";
+    cout << "\n[Producer] Buffer Size: " << buffer.size() + 1 << " | [" << name << "] make sushi => [" << s.name << " : " << s.price << "B]\n";
+
     buffer.push(s);
 }
 
@@ -87,10 +88,13 @@ Sushi get()
     n--;
     return s;
 }
+
 Sushi sushi;
-void ranSushi(){
+void ranSushi()
+{
     sushi = sushis[rand() % 23];
 }
+
 class Producer
 {
 public:
@@ -101,7 +105,7 @@ public:
         for (int i = 0; true; i++)
         {
             // cout << "ran: " << ra << "\n";
-            add(sushi, name);
+            add(sushi, this->name);
         }
     }
 };

@@ -14,14 +14,15 @@ public:
     {
         for (int i = 0; true; i++)
         {
-            if(money >= buffer.front().price){
-                Sushi temp =get();
-               std:: cout << "\n" <<name<<" have money "<< money<<" ::::: Get " << temp.name<<" : " << temp.price << endl;
-                money = money-temp.price;
-               std:: cout << "have :"<< money <<"\n\n";
-            }else{
-                
-                return 1 ;
+            if (money >= buffer.front().price)
+            {
+                Sushi temp = get();
+                cout << "\n[Consumer] [" << name << "] [" << money << "B] | Eat >> [" << temp.name << " : " << temp.price << "B] " << " | Total money: [" << money - temp.price << "B]\n\n";
+                money = money - temp.price;
+            }
+            else
+            {
+                return 1;
             }
         }
     }
@@ -32,4 +33,3 @@ Consumer::Consumer(string n, int m)
     name = n;
     money = m;
 }
-
