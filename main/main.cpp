@@ -1,11 +1,15 @@
-#include "../koa/consumer.cpp"
+#include "consumer.cpp"
 #include <omp.h>
 
 int main()
 {
-
+    generate_sushi();
     #pragma omp parallel sections
     {
+        #pragma omp section
+        {
+            while(true) ranSushi();
+        }
         #pragma omp section
         {
             Producer prod("singha");

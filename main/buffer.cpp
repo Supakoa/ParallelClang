@@ -27,7 +27,7 @@ public:
 
 Sushi sushis[23];
 
-Sushi *generate_sushi()
+void generate_sushi()
 {
     fstream csv;
     csv.open("../Sushi-bar - แผ่น1.csv");
@@ -87,7 +87,10 @@ Sushi get()
     n--;
     return s;
 }
-
+Sushi sushi;
+void ranSushi(){
+    sushi = sushis[rand() % 23];
+}
 class Producer
 {
 public:
@@ -97,9 +100,8 @@ public:
     {
         for (int i = 0; true; i++)
         {
-            int ra = rand() % 23;
-            cout << "ran: " << ra << "\n";
-            add(sushis[ra], name);
+            // cout << "ran: " << ra << "\n";
+            add(sushi, name);
         }
     }
 };

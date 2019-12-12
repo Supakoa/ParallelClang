@@ -1,6 +1,6 @@
 #include <iostream>
 #include <omp.h>
-#include "../Singha/buffer.cpp"
+#include "buffer.cpp"
 using namespace std;
 
 class Consumer
