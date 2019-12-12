@@ -1,7 +1,6 @@
 #include "consumer.cpp"
 #include <omp.h>
-#include <thread>
-#include <chrono>
+
 int main()
 {
     generate_sushi();

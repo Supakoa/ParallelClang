@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <omp.h>
 #include <fstream>
+#include <thread>
+#include <chrono>
 // #include "../temp/main.cpp"
 #define MAX_BUFFER 10
 #include <queue>
@@ -75,6 +77,7 @@ void add(Sushi s, string name)
         ;
     n++;
     cout << "\n[Producer] Buffer Size: " << buffer.size() + 1 << " | [" << name << "] make sushi => [" << s.name << " : " << s.price << "B]\n";
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
     buffer.push(s);
 }
