@@ -25,8 +25,7 @@ public:
 };
 // end class
 
-
-Sushi *generate_sushi()
+Sushi* generate_sushi()
 {
     fstream csv;
     csv.open("../Sushi-bar - แผ่น1.csv");
@@ -60,20 +59,25 @@ Sushi *generate_sushi()
     // cout << sushis[0].price << "\n";
     return sushis;
 }
-Sushi* newSushi = generate_sushi();
 
-Sushi ran_sushi(){
-    int ran = rand()% 23;
+Sushi* newSushi;
+newSushi = generate_sushi();
+
+Sushi *ran_sushi()
+{
+    int ran = rand() % 23;
     return newSushi[ran];
 }
 
 queue<Sushi> buffer;
 int n = 0;
 bool lock = 0;
+
 bool isFull()
 {
     return n >= MAX_BUFFER;
 }
+
 bool isEmtry()
 {
     return n <= 0;
@@ -98,7 +102,6 @@ Sushi get()
     n--;
     return s;
 }
-
 
 class Producer
 {
