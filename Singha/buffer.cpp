@@ -63,7 +63,8 @@ Sushi *generate_sushi()
 Sushi* newSushi = generate_sushi();
 
 Sushi ran_sushi(){
-    int ran = rand()% 23;
+    int ran = rand() % 23;
+    cout << ran << "\n\n";
     return newSushi[ran];
 }
 
