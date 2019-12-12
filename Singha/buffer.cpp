@@ -37,7 +37,7 @@ void add(Sushi s,string name)
     while (buffer.size()>=MAX_BUFFER);
     
     
-   std:: cout << "Buffer" << n << " // " << name << " Make : " << s.name << " : " << s.price<<"\n";
+   std:: cout << "Buffer" << n << " // " << name << " Make : " << s.name << " : " << s.price << " \n";
     buffer.push(s);
     n++;
 }
@@ -51,7 +51,7 @@ Sushi get()
     n--;
     return s;
 }
-Sushi *all = {new Sushi("aaei", 10)};
+Sushi *all = {new Sushi("Sushi", 10)};
 class Producer
 {
 public:

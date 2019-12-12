@@ -1,6 +1,6 @@
 #include <iostream>
 #include <omp.h>
-#include "../Singha/buff&Prod.cpp"
+#include "../Singha/buffer.cpp"
 using namespace std;
 
 class Consumer
@@ -10,18 +10,19 @@ public:
     int money;
     Consumer(string n, int m);
 
-    void getSushi()
+    int getSushi()
     {
         // while(isEmtry);
         for (int i = 0; true; i++)
         {
-            if(money>=buffer.front().price){
+            if(money >= buffer.front().price){
                 Sushi temp =get();
-               std:: cout<<name<<" have money "<< money<<" ::::: Get " << temp.name<<" : " << temp.price << endl;
+                cout<< name <<" have money "<< money <<" ::::: Get " << temp.name <<" : " << temp.price << " \n";
                 money = money-temp.price;
-               std:: cout<< "have :"<<money<<"\n\n";
+               std:: cout << "have :"<< money <<"\n\n";
             }else{
-                break;
+                
+                return 1 ;
             }
           
         }
