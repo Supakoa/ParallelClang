@@ -1,4 +1,6 @@
 #include "../koa/consumer.cpp"
+#include <omp.h>
+
 
 int main()
 {

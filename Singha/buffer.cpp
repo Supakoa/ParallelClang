@@ -49,7 +49,7 @@ Sushi get()
         n--;
         return s;
 }
-Sushi *all = {new Sushi("aaei", 10)};
+Sushi *all = {new Sushi("Sushi", 10)};
 class Producer
 {
 public:

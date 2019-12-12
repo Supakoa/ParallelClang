@@ -1,17 +1,11 @@
 #include <stdio.h>
+#include <sys/types.h> 
+#include <unistd.h> 
 
-// openmp
-#include <omp.h>
+int main() {
+   printf("hi\n");
 
-int main()
-{
-#pragma omp parallel
-   {
-      int threadNum, numThread;
-      threadNum = omp_get_thread_num();
-      numThread = omp_get_num_threads();
-      printf("tn: %d, nt: %d\n", threadNum, numThread);
-   }
+   int i = fork();
 
    return 0;
 }
