@@ -3,7 +3,6 @@
 
 int main()
 {
-    int num_td;
     cout << "---------------- generate section -------------- \n" << endl;
     generate_sushi();
     cout << "---------------------- end --------------------- \n" << endl;
@@ -24,7 +23,7 @@ int main()
         #pragma omp section 
         {
             int i = 1;
-            num_td = omp_get_thread_num();  
+           int num_td = omp_get_thread_num();  
 
             while (true)
             {
