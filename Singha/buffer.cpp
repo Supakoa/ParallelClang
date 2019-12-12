@@ -5,6 +5,7 @@
 #include <queue>
 using namespace std;
 
+// class sushi
 class Sushi
 {
 public:
