@@ -8,12 +8,9 @@ int main()
     {
         #pragma omp section
         {
-          
-                    Producer prod("singha");
-                    // cout<< prod.name;
-                    prod.makeOrder();
-                
-              
+            Producer prod("singha");
+            // cout<< prod.name;
+            prod.makeOrder();
         }
         #pragma omp section
         {
@@ -23,12 +20,12 @@ int main()
                 #pragma omp critical
                 {
 
-                    Consumer cons("Pee" + std::to_string(i), 500+i);
+                    Consumer cons("Pee" + std::to_string(i), 500);
                     cons.getSushi();
                 }
                 #pragma omp critical
                 {
-                    Consumer cons("Koa" + std::to_string(i), 500+i);
+                    Consumer cons("Koa" + std::to_string(i), 500);
                     cons.getSushi();
                 }
                 i++;

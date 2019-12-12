@@ -25,7 +25,7 @@ public:
 };
 // end class
 
-
+Sushi sushis[23];
 Sushi *generate_sushi()
 {
     fstream csv;
@@ -49,7 +49,7 @@ Sushi *generate_sushi()
     }
 
     //create object array
-    Sushi sushis[23];
+    
 
     for (int i = 0; i < Size_Of_Sushi; i++)
     {
@@ -69,15 +69,14 @@ Sushi ran_sushi(){
 
 queue<Sushi> buffer;
 int n = 0;
-bool lock = 0;
-bool isFull()
-{
-    return n >= MAX_BUFFER;
-}
-bool isEmtry()
-{
-    return n <= 0;
-}
+// bool isFull()
+// {
+//     return n >= MAX_BUFFER;
+// }
+// bool isEmtry()
+// {
+//     return n <= 0;
+// }
 
 void add(Sushi s, string name)
 {
