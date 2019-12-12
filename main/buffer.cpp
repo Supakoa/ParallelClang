@@ -30,7 +30,7 @@ Sushi sushis[23];
 void generate_sushi()
 {
     fstream csv;
-    csv.open("../Sushi-bar - แผ่น1.csv");
+    csv.open("../Sushi-bar - แผ่น1.txt");
     string sushi[23][2];
     int i = 0, c = 0;
 
