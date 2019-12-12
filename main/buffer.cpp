@@ -4,7 +4,6 @@
 #include <fstream>
 #include <thread>
 #include <chrono>
-// #include "../temp/main.cpp"
 #define MAX_BUFFER 10
 #include <queue>
 #define Size_Of_Sushi 23
