@@ -5,45 +5,34 @@
 int main()
 {
 
-   
-    #pragma omp parallel sections
+#pragma omp parallel sections
     {
-        int td = omp_get_num_threads();
-
-            #pragma omp section
+#pragma omp section
+        {
+            Producer prod("singha");
+            prod.makeOrder();
+        }
+#pragma omp section
+        {
+            int i = 1;
+            while (true)
             {
-                Producer prod("singha");
-                prod.makeOrder();
-            }
-             #pragma omp section
-            {
-                cout<< td<< "::" <<"COSSS\n";
-                Consumer cons("Pee",500);
-                if (cons.getSushi())
+                #pragma omp critical
                 {
-                   Consumer cons("PP", 500);
-                cons.getSushi();
+
+                    Consumer cons("Pee"+ std::to_string(i), 500);
+                    cons.getSushi();
+                   
                 }
-
-                cout << "you back\n\n";
-                // if (cons.money <=  50){
-                // Consumer cons("PP", 500);
-                // cons.getSushi();
-                // } 
-                
+                #pragma omp critical
+                {
+                    Consumer cons("Koa"+std::to_string(i), 500);
+                    cons.getSushi();
+                }
+                 i++;
             }
-            // #pragma omp section
-            // {
-            //     cout<< td<< "::" <<"COSSS\n";
-            //     Consumer cons("koa",500);
-            //     cons.getSushi();
-            // }
-            
+        }
     }
-    
-    // Sushi a("name", 50);
-
-
 
     return 0;
 }
