@@ -1,6 +1,7 @@
 #include "consumer.cpp"
 #include <omp.h>
-
+#include <thread>
+#include <chrono>
 int main()
 {
     generate_sushi();
@@ -21,6 +22,7 @@ int main()
             int i = 1;
             while (true)
             {
+                cout <<"------------------------"<< i << "------------------------\n";
                 #pragma omp critical
                 {
 
@@ -33,6 +35,7 @@ int main()
                     cons.getSushi();
                 }
                 i++;
+                std::this_thread::sleep_for(std::chrono::milliseconds(1000));
             }
         }
     }
