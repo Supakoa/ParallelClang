@@ -1,0 +1,563 @@
+[0 : 0]: Chopsticks
+
+[0 : 1]: 1
+
+[1 : 0]: Dumpling
+
+[1 : 1]: 2
+
+[2 : 0]: Edamame
+
+[2 : 1]: 3
+
+[3 : 0]: Eel
+
+[3 : 1]: 4
+
+[4 : 0]: Egg Nigiri
+
+[4 : 1]: 5
+
+[5 : 0]: Fruit
+
+[5 : 1]: 6
+
+[6 : 0]: Green Tea Ice Cream
+
+[6 : 1]: 7
+
+[7 : 0]: Maki Rolls
+
+[7 : 1]: 8
+
+[8 : 0]: Miso Soup
+
+[8 : 1]: 9
+
+[9 : 0]: Onigiri
+
+[9 : 1]: 10
+
+[10 : 0]: Pudding
+
+[10 : 1]: 11
+
+[11 : 0]: Salmon Nigiri
+
+[11 : 1]: 12
+
+[12 : 0]: Sashimi
+
+[12 : 1]: 13
+
+[13 : 0]: Soy Sauce
+
+[13 : 1]: 14
+
+[14 : 0]: Spoon
+
+[14 : 1]: 15
+
+[15 : 0]: Squid Nigiri
+
+[15 : 1]: 16
+
+[16 : 0]: Takeout Box
+
+[16 : 1]: 17
+
+[17 : 0]: Tea
+
+[17 : 1]: 18
+
+[18 : 0]: Temaki
+
+[18 : 1]: 19
+
+[19 : 0]: Tempura
+
+[19 : 1]: 20
+
+[20 : 0]: Tofu
+
+[20 : 1]: 21
+
+[21 : 0]: Uramaki
+
+[21 : 1]: 22
+
+[22 : 0]: Wasabi
+
+[22 : 1]: 23
+
+
+[Producer] [American2] make sushi => [Fruit : 6B] | Buffer Size: 1
+
+[Producer] [singha0] make sushi => [Salmon Nigiri : 12B] | Buffer Size: 2
+
+[Producer] [American2] make sushi => [Tempura : 20B] | Buffer Size: 3
+
+[Producer] [singha0] make sushi => [Temaki : 19B] | Buffer Size: 4
+
+[Producer] [singha0] make sushi => [Spoon : 15B] | Buffer Size: 5
+
+[Producer] [American2] make sushi => [Spoon : 15B] | Buffer Size: 6
+
+[Producer] [singha0] make sushi => [Dumpling : 2B] | Buffer Size: 7
+
+[Producer] [singha0] make sushi => [Egg Nigiri : 5B] | Buffer Size: 8
+
+[Producer] [American2] make sushi => [Salmon Nigiri : 12B] | Buffer Size: 9
+
+[Producer] [singha0] make sushi => [Onigiri : 10B] | Buffer Size: 10
+
+[Producer] [American2] make sushi => [Uramaki : 22B] | Buffer Size: 11
+
+				[Consumer] [Pee] [415B] | Eat >> [Fruit : 6B]  | Total money: [409B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [409B] | Eat >> [Salmon Nigiri : 12B]  | Total money: [397B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Eel : 4B] | Buffer Size: 9
+
+				[Consumer] [Pee] [397B] | Eat >> [Tempura : 20B]  | Total money: [377B] | Buffer Size: 8
+
+
+[Producer] [American2] make sushi => [Pudding : 11B] | Buffer Size: 9
+
+				[Consumer] [Pee] [377B] | Eat >> [Temaki : 19B]  | Total money: [358B] | Buffer Size: 9
+
+
+				[Consumer] [Pee] [358B] | Eat >> [Spoon : 15B]  | Total money: [343B] | Buffer Size: 8
+
+
+[Producer] [singha0] make sushi => [Maki Rolls : 8B] | Buffer Size: 8
+
+				[Consumer] [Pee] [343B] | Eat >> [Spoon : 15B]  | Total money: [328B] | Buffer Size: 8
+
+
+[Producer] [singha0] make sushi => [Wasabi : 23B] | Buffer Size: 8
+
+				[Consumer] [Pee] [328B] | Eat >> [Dumpling : 2B]  | Total money: [326B] | Buffer Size: 8
+
+
+[Producer] [singha0] make sushi => [Soy Sauce : 14B] | Buffer Size: 8
+
+				[Consumer] [Pee] [326B] | Eat >> [Egg Nigiri : 5B]  | Total money: [321B] | Buffer Size: 8
+
+
+[Producer] [singha0] make sushi => [Squid Nigiri : 16B] | Buffer Size: 8
+
+				[Consumer] [Pee] [321B] | Eat >> [Salmon Nigiri : 12B]  | Total money: [309B] | Buffer Size: 8
+
+
+[Producer] [singha0] make sushi => [Edamame : 3B] | Buffer Size: 8
+
+				[Consumer] [Pee] [309B] | Eat >> [Onigiri : 10B]  | Total money: [299B] | Buffer Size: 8
+
+
+[Producer] [American2] make sushi => [Edamame : 3B] | Buffer Size: 8
+
+				[Consumer] [Pee] [299B] | Eat >> [Uramaki : 22B]  | Total money: [277B] | Buffer Size: 8
+
+
+[Producer] [singha0] make sushi => [Pudding : 11B] | Buffer Size: 9
+
+[Producer] [American2] make sushi => [Soy Sauce : 14B] | Buffer Size: 10
+
+[Producer] [singha0] make sushi => [Pudding : 11B] | Buffer Size: 10
+
+[Producer] [American2] make sushi => [Spoon : 15B] | Buffer Size: 11
+
+				[Consumer] [Pee] [277B] | Eat >> [Eel : 4B]  | Total money: [273B] | Buffer Size: 11
+
+
+				[Consumer] [Pee] [273B] | Eat >> [Pudding : 11B]  | Total money: [262B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [262B] | Eat >> [Maki Rolls : 8B]  | Total money: [254B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Uramaki : 22B] | Buffer Size: 9
+
+[Producer] [American2] make sushi => [Dumpling : 2B] | Buffer Size: 10
+
+				[Consumer] [Pee] [254B] | Eat >> [Wasabi : 23B]  | Total money: [231B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [231B] | Eat >> [Soy Sauce : 14B]  | Total money: [217B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Onigiri : 10B] | Buffer Size: 9
+
+[Producer] [American2] make sushi => [Egg Nigiri : 5B] | Buffer Size: 10
+
+				[Consumer] [Pee] [217B] | Eat >> [Squid Nigiri : 16B]  | Total money: [201B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [201B] | Eat >> [Edamame : 3B]  | Total money: [198B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Miso Soup : 9B] | Buffer Size: 9
+
+				[Consumer] [Pee] [198B] | Eat >> [Edamame : 3B]  | Total money: [195B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Egg Nigiri : 5B] | Buffer Size: 9
+
+				[Consumer] [Pee] [195B] | Eat >> [Pudding : 11B]  | Total money: [184B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Green Tea Ice Cream : 7B] | Buffer Size: 9
+
+[Producer] [American2] make sushi => [Pudding : 11B] | Buffer Size: 10
+
+				[Consumer] [Pee] [184B] | Eat >> [Soy Sauce : 14B]  | Total money: [170B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [170B] | Eat >> [Pudding : 11B]  | Total money: [159B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Takeout Box : 17B] | Buffer Size: 9
+
+[Producer] [American2] make sushi => [Edamame : 3B] | Buffer Size: 10
+
+				[Consumer] [Pee] [159B] | Eat >> [Spoon : 15B]  | Total money: [144B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [144B] | Eat >> [Uramaki : 22B]  | Total money: [122B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Dumpling : 2B] | Buffer Size: 9
+
+				[Consumer] [Pee] [122B] | Eat >> [Dumpling : 2B]  | Total money: [120B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Chopsticks : 1B] | Buffer Size: 9
+
+				[Consumer] [Pee] [120B] | Eat >> [Onigiri : 10B]  | Total money: [110B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Maki Rolls : 8B] | Buffer Size: 9
+
+				[Consumer] [Pee] [110B] | Eat >> [Egg Nigiri : 5B]  | Total money: [105B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Tofu : 21B] | Buffer Size: 9
+
+				[Consumer] [Pee] [105B] | Eat >> [Miso Soup : 9B]  | Total money: [96B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Temaki : 19B] | Buffer Size: 9
+
+				[Consumer] [Pee] [96B] | Eat >> [Egg Nigiri : 5B]  | Total money: [91B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Soy Sauce : 14B] | Buffer Size: 9
+
+[Producer] [American2] make sushi => [Onigiri : 10B] | Buffer Size: 10
+
+				[Consumer] [Pee] [91B] | Eat >> [Green Tea Ice Cream : 7B]  | Total money: [84B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [84B] | Eat >> [Pudding : 11B]  | Total money: [73B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Edamame : 3B] | Buffer Size: 9
+
+				[Consumer] [Pee] [73B] | Eat >> [Takeout Box : 17B]  | Total money: [56B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Takeout Box : 17B] | Buffer Size: 9
+
+				[Consumer] [Pee] [56B] | Eat >> [Edamame : 3B]  | Total money: [53B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Tofu : 21B] | Buffer Size: 9
+
+				[Consumer] [Pee] [53B] | Eat >> [Dumpling : 2B]  | Total money: [51B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Soy Sauce : 14B] | Buffer Size: 9
+
+[Producer] [singha0] make sushi => [Spoon : 15B] | Buffer Size: 10
+
+				[Consumer] [Pee] [51B] | Eat >> [Chopsticks : 1B]  | Total money: [50B] | Buffer Size: 10
+
+
+[Producer] [American2] make sushi => [Tofu : 21B] | Buffer Size: 10
+
+				[Consumer] [Pee] [50B] | Eat >> [Maki Rolls : 8B]  | Total money: [42B] | Buffer Size: 10
+
+
+[Producer] [singha0] make sushi => [Egg Nigiri : 5B] | Buffer Size: 10
+
+				[Consumer] [Pee] [42B] | Eat >> [Tofu : 21B]  | Total money: [21B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [21B] | Eat >> [Temaki : 19B]  | Total money: [2B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Takeout Box : 17B] | Buffer Size: 10
+
+[Producer] [American2] make sushi => [Tofu : 21B] | Buffer Size: 11
+
+				[Consumer] [Pee] [189B] | Eat >> [Soy Sauce : 14B]  | Total money: [175B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [175B] | Eat >> [Onigiri : 10B]  | Total money: [165B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Dumpling : 2B] | Buffer Size: 9
+
+[Producer] [American2] make sushi => [Fruit : 6B] | Buffer Size: 10
+
+				[Consumer] [Pee] [165B] | Eat >> [Edamame : 3B]  | Total money: [162B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [162B] | Eat >> [Takeout Box : 17B]  | Total money: [145B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Green Tea Ice Cream : 7B] | Buffer Size: 9
+
+				[Consumer] [Pee] [145B] | Eat >> [Tofu : 21B]  | Total money: [124B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Temaki : 19B] | Buffer Size: 9
+
+				[Consumer] [Pee] [124B] | Eat >> [Soy Sauce : 14B]  | Total money: [110B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Dumpling : 2B] | Buffer Size: 9
+
+				[Consumer] [Pee] [110B] | Eat >> [Spoon : 15B]  | Total money: [95B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Edamame : 3B] | Buffer Size: 9
+
+				[Consumer] [Pee] [95B] | Eat >> [Tofu : 21B]  | Total money: [74B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Egg Nigiri : 5B] | Buffer Size: 9
+
+				[Consumer] [Pee] [74B] | Eat >> [Egg Nigiri : 5B]  | Total money: [69B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Eel : 4B] | Buffer Size: 9
+
+				[Consumer] [Pee] [69B] | Eat >> [Takeout Box : 17B]  | Total money: [52B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Chopsticks : 1B] | Buffer Size: 9
+
+				[Consumer] [Pee] [52B] | Eat >> [Tofu : 21B]  | Total money: [31B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Chopsticks : 1B] | Buffer Size: 9
+
+[Producer] [singha0] make sushi => [Fruit : 6B] | Buffer Size: 10
+
+				[Consumer] [Pee] [31B] | Eat >> [Dumpling : 2B]  | Total money: [29B] | Buffer Size: 10
+
+
+[Producer] [American2] make sushi => [Dumpling : 2B] | Buffer Size: 10
+
+[Producer] [singha0] make sushi => [Tea : 18B] | Buffer Size: 11
+
+				[Consumer] [Pee] [29B] | Eat >> [Fruit : 6B]  | Total money: [23B] | Buffer Size: 11
+
+
+				[Consumer] [Pee] [23B] | Eat >> [Green Tea Ice Cream : 7B]  | Total money: [16B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [44B] | Eat >> [Temaki : 19B]  | Total money: [25B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Wasabi : 23B] | Buffer Size: 9
+
+				[Consumer] [Pee] [25B] | Eat >> [Dumpling : 2B]  | Total money: [23B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Squid Nigiri : 16B] | Buffer Size: 9
+
+				[Consumer] [Pee] [23B] | Eat >> [Edamame : 3B]  | Total money: [20B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Soy Sauce : 14B] | Buffer Size: 9
+
+				[Consumer] [Pee] [20B] | Eat >> [Egg Nigiri : 5B]  | Total money: [15B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Soy Sauce : 14B] | Buffer Size: 9
+
+				[Consumer] [Pee] [15B] | Eat >> [Eel : 4B]  | Total money: [11B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Tofu : 21B] | Buffer Size: 9
+
+				[Consumer] [Pee] [11B] | Eat >> [Chopsticks : 1B]  | Total money: [10B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Sashimi : 13B] | Buffer Size: 9
+
+				[Consumer] [Pee] [10B] | Eat >> [Chopsticks : 1B]  | Total money: [9B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Takeout Box : 17B] | Buffer Size: 9
+
+[Producer] [singha0] make sushi => [Green Tea Ice Cream : 7B] | Buffer Size: 10
+
+				[Consumer] [Pee] [9B] | Eat >> [Fruit : 6B]  | Total money: [3B] | Buffer Size: 10
+
+
+[Producer] [American2] make sushi => [Uramaki : 22B] | Buffer Size: 10
+
+[Producer] [singha0] make sushi => [Chopsticks : 1B] | Buffer Size: 11
+
+				[Consumer] [Pee] [3B] | Eat >> [Dumpling : 2B]  | Total money: [1B] | Buffer Size: 11
+
+
+				[Consumer] [Pee] [491B] | Eat >> [Tea : 18B]  | Total money: [473B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [473B] | Eat >> [Wasabi : 23B]  | Total money: [450B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Soy Sauce : 14B] | Buffer Size: 9
+
+				[Consumer] [Pee] [450B] | Eat >> [Squid Nigiri : 16B]  | Total money: [434B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Salmon Nigiri : 12B] | Buffer Size: 9
+
+[Producer] [singha0] make sushi => [Spoon : 15B] | Buffer Size: 10
+
+				[Consumer] [Pee] [434B] | Eat >> [Soy Sauce : 14B]  | Total money: [420B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [420B] | Eat >> [Soy Sauce : 14B]  | Total money: [406B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Onigiri : 10B] | Buffer Size: 9
+
+[Producer] [singha0] make sushi => [Tofu : 21B] | Buffer Size: 10
+
+				[Consumer] [Pee] [406B] | Eat >> [Tofu : 21B]  | Total money: [385B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [385B] | Eat >> [Sashimi : 13B]  | Total money: [372B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Edamame : 3B] | Buffer Size: 9
+
+				[Consumer] [Pee] [372B] | Eat >> [Takeout Box : 17B]  | Total money: [355B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Eel : 4B] | Buffer Size: 9
+
+				[Consumer] [Pee] [355B] | Eat >> [Green Tea Ice Cream : 7B]  | Total money: [348B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Pudding : 11B] | Buffer Size: 9
+
+[Producer] [singha0] make sushi => [Pudding : 11B] | Buffer Size: 10
+
+				[Consumer] [Pee] [348B] | Eat >> [Uramaki : 22B]  | Total money: [326B] | Buffer Size: 10
+
+
+[Producer] [American2] make sushi => [Salmon Nigiri : 12B] | Buffer Size: 10
+
+[Producer] [singha0] make sushi => [Green Tea Ice Cream : 7B] | Buffer Size: 11
+
+				[Consumer] [Pee] [326B] | Eat >> [Chopsticks : 1B]  | Total money: [325B] | Buffer Size: 11
+
+
+				[Consumer] [Pee] [325B] | Eat >> [Soy Sauce : 14B]  | Total money: [311B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [311B] | Eat >> [Salmon Nigiri : 12B]  | Total money: [299B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Egg Nigiri : 5B] | Buffer Size: 9
+
+[Producer] [American2] make sushi => [Edamame : 3B] | Buffer Size: 10
+
+				[Consumer] [Pee] [299B] | Eat >> [Spoon : 15B]  | Total money: [284B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [284B] | Eat >> [Onigiri : 10B]  | Total money: [274B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Tofu : 21B] | Buffer Size: 9
+
+				[Consumer] [Pee] [274B] | Eat >> [Tofu : 21B]  | Total money: [253B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Tea : 18B] | Buffer Size: 9
+
+[Producer] [singha0] make sushi => [Fruit : 6B] | Buffer Size: 10
+
+				[Consumer] [Pee] [253B] | Eat >> [Edamame : 3B]  | Total money: [250B] | Buffer Size: 10
+
+
+				[Consumer] [Pee] [250B] | Eat >> [Eel : 4B]  | Total money: [246B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Fruit : 6B] | Buffer Size: 9
+
+				[Consumer] [Pee] [246B] | Eat >> [Pudding : 11B]  | Total money: [235B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Spoon : 15B] | Buffer Size: 9
+
+				[Consumer] [Pee] [235B] | Eat >> [Pudding : 11B]  | Total money: [224B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Squid Nigiri : 16B] | Buffer Size: 9
+
+				[Consumer] [Pee] [224B] | Eat >> [Salmon Nigiri : 12B]  | Total money: [212B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Squid Nigiri : 16B] | Buffer Size: 9
+
+				[Consumer] [Pee] [212B] | Eat >> [Green Tea Ice Cream : 7B]  | Total money: [205B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Spoon : 15B] | Buffer Size: 9
+
+				[Consumer] [Pee] [205B] | Eat >> [Egg Nigiri : 5B]  | Total money: [200B] | Buffer Size: 9
+
+
+[Producer] [singha0] make sushi => [Wasabi : 23B] | Buffer Size: 9
+
+				[Consumer] [Pee] [200B] | Eat >> [Edamame : 3B]  | Total money: [197B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Edamame : 3B] | Buffer Size: 9
+
+				[Consumer] [Pee] [197B] | Eat >> [Tofu : 21B]  | Total money: [176B] | Buffer Size: 9
+
+
+[Producer] [American2] make sushi => [Tea : 18B] | Buffer Size: 9
+
+				[Consumer] [Pee] [176B] | Eat >> [Tea : 18B]  | Total money: [158B] | Buffer Size: 8
+
+
+[Producer] [singha0] make sushi => [Squid Nigiri : 16B] | Buffer Size: 8
+
+				[Consumer] [Pee] [158B] | Eat >> [Fruit : 6B]  | Total money: [152B] | Buffer Size: 8
+
+
+				[Consumer] [Pee] [152B] | Eat >> [Fruit : 6B]  | Total money: [146B] | Buffer Size: 7
+
+
+				[Consumer] [Pee] [146B] | Eat >> [Spoon : 15B]  | Total money: [131B] | Buffer Size: 6
+
+
+[Producer] [singha0] make sushi => [Green Tea Ice Cream : 7B] | Buffer Size: 6
+
+				[Consumer] [Pee] [131B] | Eat >> [Squid Nigiri : 16B]  | Total money: [115B] | Buffer Size: 6
+
+
+[Producer] [
