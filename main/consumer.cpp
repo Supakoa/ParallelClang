@@ -17,7 +17,7 @@ public:
             if (money >= buffer.front().price)
             {
                 Sushi temp = get();
-                cout << "\n[Consumer] [" << name << "] [" << money << "B] | Eat >> [" << temp.name << " : " << temp.price << "B] " << " | Total money: [" << money - temp.price << "B]\n\n";
+                cout << "\n\t\t\t[Consumer] [" << name << "] [" << money << "B] | Eat >> [" << temp.name << " : " << temp.price << "B] " << " | Total money: [" << money - temp.price << "B]\n\n";
                 money = money - temp.price;
             }
             else

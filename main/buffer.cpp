@@ -84,8 +84,10 @@ void add(Sushi s, string name)
 
 Sushi get()
 {
-    while (buffer.empty())
-        ;
+    while (buffer.empty()){
+                std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+    }
     Sushi s = buffer.front();
     buffer.pop();
     n--;

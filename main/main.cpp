@@ -27,15 +27,22 @@ int main()
                     Consumer cons("Pee" + std::to_string(i), 500);
                     cons.getSushi();
                 }
-                #pragma omp critical
-                {
-                    Consumer cons("Koa" + std::to_string(i), 500);
-                    cons.getSushi();
-                }
+               
                 i++;
                 std::this_thread::sleep_for(std::chrono::milliseconds(1000));
             }
         }
+         #pragma omp section
+         
+                {
+                    int i = 1;
+            while (true)
+            {
+                    Consumer cons("Koa" + std::to_string(i), 500);
+                    cons.getSushi();
+                    i++;
+            }
+                }
     }
 
     return 0;
